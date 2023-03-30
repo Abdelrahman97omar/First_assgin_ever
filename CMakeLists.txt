@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.1)
+project(assginment_1)
+set(CMAKE_CXX_STANDARAD 17)
+include_directories(include/)
+add_executable(first-cmake-try src/first.cpp)
+
