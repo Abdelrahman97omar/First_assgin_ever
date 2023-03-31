@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/calculate.dir/src/calcultor.cpp.o  -o calculate 

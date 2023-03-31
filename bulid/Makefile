@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cal
+
+# Build rule for target.
+cal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cal
+.PHONY : cal
+
+# fast build rule for target.
+cal/fast:
+	$(MAKE) -f CMakeFiles/cal.dir/build.make CMakeFiles/cal.dir/build
+.PHONY : cal/fast
+
+#=============================================================================
+# Target rules for targets named calculate
+
+# Build rule for target.
+calculate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calculate
+.PHONY : calculate
+
+# fast build rule for target.
+calculate/fast:
+	$(MAKE) -f CMakeFiles/calculate.dir/build.make CMakeFiles/calculate.dir/build
+.PHONY : calculate/fast
+
+#=============================================================================
 # Target rules for targets named first-cmake-try
 
 # Build rule for target.
@@ -122,6 +148,60 @@ first-cmake-try: cmake_check_build_system
 first-cmake-try/fast:
 	$(MAKE) -f CMakeFiles/first-cmake-try.dir/build.make CMakeFiles/first-cmake-try.dir/build
 .PHONY : first-cmake-try/fast
+
+src/calcultor.o: src/calcultor.cpp.o
+
+.PHONY : src/calcultor.o
+
+# target to build an object file
+src/calcultor.cpp.o:
+	$(MAKE) -f CMakeFiles/calculate.dir/build.make CMakeFiles/calculate.dir/src/calcultor.cpp.o
+.PHONY : src/calcultor.cpp.o
+
+src/calcultor.i: src/calcultor.cpp.i
+
+.PHONY : src/calcultor.i
+
+# target to preprocess a source file
+src/calcultor.cpp.i:
+	$(MAKE) -f CMakeFiles/calculate.dir/build.make CMakeFiles/calculate.dir/src/calcultor.cpp.i
+.PHONY : src/calcultor.cpp.i
+
+src/calcultor.s: src/calcultor.cpp.s
+
+.PHONY : src/calcultor.s
+
+# target to generate assembly for a file
+src/calcultor.cpp.s:
+	$(MAKE) -f CMakeFiles/calculate.dir/build.make CMakeFiles/calculate.dir/src/calcultor.cpp.s
+.PHONY : src/calcultor.cpp.s
+
+src/circle_area.o: src/circle_area.cpp.o
+
+.PHONY : src/circle_area.o
+
+# target to build an object file
+src/circle_area.cpp.o:
+	$(MAKE) -f CMakeFiles/cal.dir/build.make CMakeFiles/cal.dir/src/circle_area.cpp.o
+.PHONY : src/circle_area.cpp.o
+
+src/circle_area.i: src/circle_area.cpp.i
+
+.PHONY : src/circle_area.i
+
+# target to preprocess a source file
+src/circle_area.cpp.i:
+	$(MAKE) -f CMakeFiles/cal.dir/build.make CMakeFiles/cal.dir/src/circle_area.cpp.i
+.PHONY : src/circle_area.cpp.i
+
+src/circle_area.s: src/circle_area.cpp.s
+
+.PHONY : src/circle_area.s
+
+# target to generate assembly for a file
+src/circle_area.cpp.s:
+	$(MAKE) -f CMakeFiles/cal.dir/build.make CMakeFiles/cal.dir/src/circle_area.cpp.s
+.PHONY : src/circle_area.cpp.s
 
 src/first.o: src/first.cpp.o
 
@@ -158,7 +238,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... cal"
+	@echo "... calculate"
 	@echo "... first-cmake-try"
+	@echo "... src/calcultor.o"
+	@echo "... src/calcultor.i"
+	@echo "... src/calcultor.s"
+	@echo "... src/circle_area.o"
+	@echo "... src/circle_area.i"
+	@echo "... src/circle_area.s"
 	@echo "... src/first.o"
 	@echo "... src/first.i"
 	@echo "... src/first.s"
