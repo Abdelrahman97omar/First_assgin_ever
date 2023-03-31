@@ -3,4 +3,5 @@ project(assginment_1)
 set(CMAKE_CXX_STANDARAD 17)
 include_directories(include/)
 add_executable(first-cmake-try src/first.cpp)
-
+add_executable(calculate src/calcultor.cpp)
+add_executable(cal src/circle_area.cpp)
